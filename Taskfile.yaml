@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o bin/
+
+  run:
+    deps: [build]
+    cmds:
+      - ./bin/lightweightCacheServer.exe
+
+  test:
+    cmds:
+      - go test -v ./...
