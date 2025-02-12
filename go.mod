@@ -1,6 +1,6 @@
 module github.com/shatwik7/lightweightCacheServer
 
-go 1.23.5
+go 1.20
 
 require github.com/gofiber/fiber/v2 v2.52.6
 
