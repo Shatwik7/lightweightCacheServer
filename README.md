@@ -8,6 +8,7 @@ This project is a lightweight, reverse-engineered implementation of a Redis-comp
 - **Basic Caching Operations**:
   - `SET key value`: Stores a key-value pair in the cache.
   - `GET key`: Retrieves the value associated with a key.
+- **LRU-Based Eviction**: Implemented a Least Recently Used (LRU) eviction policy to automatically remove old keys when memory limits are reached.
 - **Lightweight and Efficient**: The server is designed to be minimalistic, focusing only on the essential caching functionality.
 - **Concurrency Support**: The server uses a thread-safe key-value store, ensuring safe concurrent access to the cache.
 
