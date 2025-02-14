@@ -5,7 +5,7 @@ import (
 )
 
 func TestKeyVal(t *testing.T) {
-	KeyVal := NewKeyVal()
+	KeyVal := NewKeyVal(2)
 	key := "mykey"
 	val := "myval"
 	err := KeyVal.Set([]byte(key), []byte(val))
@@ -14,9 +14,9 @@ func TestKeyVal(t *testing.T) {
 	}
 	val2, ok := KeyVal.Get([]byte(key))
 	if !ok {
-		t.Fatal(err)
+		t.Fatal("CAN NOT GET THE VALUE")
 	}
 	if string(val2) != val {
-		t.Fatal(err)
+		t.Fatal("VALUE DOES NOT MATCH")
 	}
 }

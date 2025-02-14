@@ -42,7 +42,7 @@ func NewServer(cfg Config) *Server {
 		quitCh:    make(chan struct{}),
 		msgCh:     make(chan Message),
 		delPeerCh: make(chan *Peer),
-		KeyVal:    NewKeyVal(),
+		KeyVal:    NewKeyVal(10),
 	}
 }
 
