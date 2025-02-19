@@ -11,6 +11,7 @@ This project is a lightweight, reverse-engineered implementation of a Redis-comp
 - **LRU-Based Eviction**: Implemented a Least Recently Used (LRU) eviction policy to automatically remove old keys when memory limits are reached.
 - **Lightweight and Efficient**: The server is designed to be minimalistic, focusing only on the essential caching functionality.
 - **Concurrency Support**: The server uses a thread-safe key-value store, ensuring safe concurrent access to the cache.
+- **Smaller Image**: Optimized the image size to 15mb
 
 ## How It Works
 
@@ -37,3 +38,19 @@ $ redis-cli -p 2345
 OK
 127.0.0.1:2345> GET mykey
 "myvalue"
+```
+
+
+
+### Build and Run the Docker Container
+
+```bash
+docker build -t smallRedis .
+```
+```bash
+docker run -p 2345:2345 --rm smallRedis
+```
+## Why This Optimization?
+
+✅ Smaller Image: The final image contains only the compiled binary, reducing size.✅ Improved Security: No Go compiler or source code in production.✅ Faster Build & Deployment: Uses multi-stage builds to optimize caching.
+
